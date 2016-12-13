@@ -58,7 +58,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "dotnet bundle", "grunt restore" ],
+    "prepublish": [ "dotnet bundle", "npm run postinstall" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }

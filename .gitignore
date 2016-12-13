@@ -32,8 +32,8 @@ bld/
 # Visual Studio 2015 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
-src/BoardGameTinder/wwwroot/lib/
-src/BoardGameTinder/typings
+src/wwwroot/lib/
+src/typings
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -78,6 +78,7 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+*.xproj*
 
 # Chutzpah Test files
 _Chutzpah*
