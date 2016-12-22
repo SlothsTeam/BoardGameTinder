@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-dotnet restore && dotnet build **/project.json
+dotnet restore 
+dotnet test ./test/BoardGameTinder.Tests
+dotnet build **/project.json
