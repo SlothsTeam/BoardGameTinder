@@ -1,4 +1,5 @@
 # Board Game Tinder  
+Travis: [![Travis](https://api.travis-ci.org/SlothsTeam/BoardGameTinder.svg)](https://travis-ci.org/SlothsTeam/BoardGameTinder)
 
 It is a great app for bringing together board game enthusiasts.
 
