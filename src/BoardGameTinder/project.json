@@ -57,6 +57,7 @@
         "portable-net45+win8"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Tools.DotNet" : "1.1.0-preview4",
     "Microsoft.Extensions.SecretManager.Tools": {
       "version": "1.0.0-preview2-final",
       "imports": "portable-net45+win8+dnxcore50"

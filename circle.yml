@@ -1,3 +1,6 @@
+machine:
+  services:
+    - docker
 dependencies:
   pre:
     - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -6,6 +9,21 @@ dependencies:
     - sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177
   override:
     - dotnet restore
+    - dotnet publish ./src/BoardGameTinder -c Release -o out
+    - cd src/BoardGameTinder
+    - dotnet ef database update
+    - cd -
+    - cp ./src/BoardGameTinder/bin/Debug/netcoreapp1.1/WebApplication.db ./out
+    - docker info
+    - docker build -t gflejszar/boardgametinder .
 test:
   override:
     - dotnet test ./test/BoardGameTinder.Tests
+    - docker run -d -p 8000:80 gflejszar/boardgametinder
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push gflejszar/boardgametinder
+
