@@ -7,7 +7,7 @@ dependencies:
     - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
     - sudo apt-get update
     - sudo apt-get install dotnet-dev-1.0.0-preview2.1-003177
-    - sudo npm install -g gulp
+    - npm install -g gulp
   override:
     - dotnet restore
     - dotnet publish ./src/BoardGameTinder -c Release -o out
@@ -21,6 +21,7 @@ test:
   override:
     - dotnet test ./test/BoardGameTinder.Tests
     - docker run -d -p 8000:80 gflejszar/boardgametinder
+    - curl --retry 10 --retry-delay 5 -v http://localhost:8000
 deployment:
   hub:
     branch: master
