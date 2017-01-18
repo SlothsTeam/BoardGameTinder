@@ -21,7 +21,7 @@
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
     "Microsoft.EntityFrameworkCore.Sqlite": "1.0.1",
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview2-final",
+      "version": "1.1.0-preview4-final",
       "type": "build"
     },
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
@@ -51,11 +51,16 @@
       "imports": "portable-net45+win8+dnxcore50"
     },
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview2-final",
+      "version": "1.1.0-preview4-final",
       "imports": [
         "portable-net45+win8+dnxcore50",
         "portable-net45+win8"
       ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools.DotNet" : "1.1.0-preview4",
+    "Microsoft.Extensions.SecretManager.Tools": {
+      "version": "1.0.0-preview2-final",
+      "imports": "portable-net45+win8+dnxcore50"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
       "version": "1.0.0-preview2-final",
