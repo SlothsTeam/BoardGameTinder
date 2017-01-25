@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebApplication.Data;
-using WebApplication.Models;
-using WebApplication.Services;
+using BoardGameTinder.Data;
+using BoardGameTinder.Models;
+using BoardGameTinder.Services;
 
-namespace WebApplication
+namespace BoardGameTinder
 {
     public class Startup
     {
